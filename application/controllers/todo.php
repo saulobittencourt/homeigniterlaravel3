@@ -31,7 +31,7 @@ class Todo_Controller extends Base_Controller {
 
     public function get_listar() {
         
-        $todos = Todo::paginate(3);
+        $todos = Todo::paginate(10);
 
     	return View::make('todos.list_todos')->with('todos', $todos);
 	}
@@ -40,8 +40,7 @@ class Todo_Controller extends Base_Controller {
         //verifica se a request é ajax
         if (Request::ajax()) {
             //criando regras de validação
-            $regras = array('task_id' => 'required|integer');
-
+            $regras = array('todo_id' => 'required|integer');
             $validacao = Validator::make(Input::all(), $regras);
 
             if ($validacao->fails()) {
@@ -50,13 +49,14 @@ class Todo_Controller extends Base_Controller {
             else {
                 //tenta encontrar e atualizar a task
                 try {
-                    $task = Todo::findOrFail(Input::get('task_id'));
-                    $task->status = TRUE;
-                    $task->save();
-
-                    return Response::json( array("status" => TRUE, "titulo" => $task->titulo) );
+                    $todo = Todo::find(Input::get('todo_id'));
+                    if($todo){
+                        $todo->status = TRUE;
+                        $todo->save();
+                    }
+                    return Response::json( array("status" => TRUE, "titulo" => $todo->titulo) );
                 }
-                //caso não tenha conseguido encontrar a task
+                //caso não tenha conseguido encontrar o to-do
                 catch(Exception $e) {
                     return Response::json( array("status" => FALSE, "mensagem" => $e->getMessage()) );
                 }

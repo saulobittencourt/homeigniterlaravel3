@@ -92,3 +92,9 @@
     color: #fff;
     opacity: 0.8;
 }
+.list-group-item>.badge{
+    float: none;
+}
+.bg-default{
+    background-color: orange;
+}

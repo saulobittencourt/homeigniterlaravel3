@@ -10,6 +10,7 @@
     <!-- Le styles -->
     <!-- {{ HTML::style("assets/css/bootstrap.css")}} -->
     {{ HTML::style("css/app.v1.css")}}
+    {{ HTML::style("css/bootstrap-responsive.css")}}
     {{ HTML::style("css/sidebar.css")}}
     {{ HTML::style("css/style3.css")}}
 

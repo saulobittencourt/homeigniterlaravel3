@@ -34,9 +34,8 @@
 			} 
 			else
 			{
-			return Redirect::to_route('user')->
-			with('flash_error','E-mail e/ou senha inválidos, tente novamente')->
-			withInput();
+			return Redirect::to_route('login')->
+			with('flash_error','E-mail e/ou senha inválidos, tente novamente');
 			}
 		}
 
