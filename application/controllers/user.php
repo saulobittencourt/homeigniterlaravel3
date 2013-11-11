@@ -28,8 +28,7 @@
 				}
 				else
 				{	
-					return Redirect::to_route('home')
-					->with('flash_notice', 'You are successfully logged in.');
+					return Redirect::to_route('home');
 				}
 			} 
 			else

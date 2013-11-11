@@ -1,3 +1,4 @@
+</div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -17,12 +18,10 @@
 
     <script type="text/javascript">
       
-      // $("#animate").click(function(){
-      //   $("#sidebar-wrapper").animate(
-      //       {
-      //         "width":"1px"
-      //       }, {"queue":false, "duration":500});
-      // });
+      $("#menu-toggle").click(function(e){
+        e.preventDefault();
+        $('#wrapper').toggleClass("active");
+      });
 
       window.setTimeout(function(){
         $(".alert-danger").fadeTo(500,0).slideUp(500, function(){
