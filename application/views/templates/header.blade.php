@@ -12,8 +12,11 @@
     {{ HTML::style("css/app.v1.css")}}
     {{ HTML::style("css/bootstrap-responsive.css")}}
     {{ HTML::style("css/font-awesome/css/font-awesome.min.css")}}
-    {{ HTML::style("css/sidebar.css")}}
+    @if( !URI::is('login'))
+      {{ HTML::style("css/sidebar.css")}}
+    @endif
     {{ HTML::style("css/style3.css")}}
+    {{ HTML::style("css/main.css")}}
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -21,9 +24,6 @@
     <![endif]-->
 
     <style type="text/css">
-        body{
-            background-color: #FFFFFF;
-        }
         #profile{
           padding: 16px 0 0 20px;
         }
