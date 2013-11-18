@@ -76,9 +76,9 @@
 }
 .ca-menu li:hover .ca-icon{
     color: orange;
-    font-size: 120px;
+    font-size: 70px;
     opacity: 0.2;
-    left: -20px;
+    left: -5px;
     -webkit-transform: rotate(20deg);
     -moz-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
