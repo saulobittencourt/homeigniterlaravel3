@@ -3,7 +3,7 @@
 @section('conteudo')
     <div id="lista">
         <section class="scrollable" id="todos">
-            <a data-toggle="modal" class="btn btn-default" href="#addTodo">What to do?</a>
+            <a data-toggle="modal" rel="tooltip" title="Adicione tarefas" class="btn btn-default" href="#addTodo">What to do?</a>
             <br /><br />
             <footer class="footer b-t"> 
                 <form class="m-t-sm"> 

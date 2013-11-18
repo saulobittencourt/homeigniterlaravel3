@@ -18,7 +18,7 @@
                 <div class="form-group" style="margin-right:-570px">
                     <label class="col-sm-3 control-label">Título</label> 
                     <div class="col-sm-4"> 
-                        <input type="text" name="titulo" class="bg-focus form-control" REQUIRED autofocus data-type="email"> 
+                        <input type="text" name="titulo" class="form-control" REQUIRED autofocus data-type="email"> 
                      </div> 
                 </div> 
                 <div class="form-group" style="margin-right:-570px"> 
@@ -34,7 +34,7 @@
                 <div class="form-group" style="margin-right:-570px"> 
                     <label class="col-sm-3 control-label">To-Do</label> 
                     <div class="col-sm-5"> 
-                        <textarea name="description" placeholder="Descreva a tarefa..." rows="5" data-trigger="keyup" data-rangelength="[20,200]" class="form-control parsley-validated"></textarea> 
+                        <textarea name="description" placeholder="Descreva a tarefa..." rows="5" data-trigger="keyup" data-rangelength="[20,200]" class="form-control"></textarea> 
                     </div> 
                 </div> 
                 <div class="form-group" style="margin-left:77px"> 
