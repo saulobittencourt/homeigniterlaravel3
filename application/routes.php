@@ -16,6 +16,8 @@ Route::get('todos', array("as"=>"todos","uses"=>"todo@listar"));
 Route::post('addtodo', array("as"=>"addtodo","uses"=>"todo@add"));
 Route::post('checktodo', array("as"=>"checktodo","uses"=>"todo@check"));
 
+Route::get('wishlists', array("as"=>"wishlists","uses"=>"wishlist@buscarproduto"));
+
 Event::listen('404', function()
 {
 	return Response::error('404');
